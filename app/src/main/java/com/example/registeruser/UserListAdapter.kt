@@ -43,7 +43,7 @@ class UserListAdapter(context: Context, cursor:Cursor?) :CursorAdapter(context,c
         val picture: Drawable = getPicture(cursor?.getString(4))?:context!!.getDrawable(android.R.drawable.ic_menu_gallery)
         holder.pic.background = picture
         //save cursor id
-        holder.del.tag = cursor?.getLong(8)
+        holder.del.tag = cursor?.getLong(0)
     }
 
     private fun getPicture(path:String?) : Drawable?{
